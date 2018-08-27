@@ -1,0 +1,13 @@
+.site-portafolio{
+    background-color: #EFEFEF;
+    padding: 40px 0;
+    .card{
+        box-shadow: 3px 10px 10px -12px #666;
+        margin-bottom: 10px;
+        &-body{
+            &__data{
+                color: #666;
+            }
+        }
+    }
+}

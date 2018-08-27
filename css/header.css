@@ -1,0 +1,56 @@
+.site-banner {
+  background-image: url("../images/portafolio-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px; }
+  @media screen and (min-width: 768px) {
+    .site-banner {
+      height: 700px; } }
+  .site-banner__container {
+    height: 500px; }
+    @media screen and (min-width: 768px) {
+      .site-banner__container {
+        height: 700px; } }
+    .site-banner__container .site-banner__name {
+      position: relative;
+      color: #fff;
+      line-height: 1;
+      padding: 15px 0;
+      font-size: 2em;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        .site-banner__container .site-banner__name {
+          font-size: 3em;
+          text-align: right; } }
+      .site-banner__container .site-banner__name::after {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 0;
+        right: -20px;
+        background-color: #FB5D12;
+        height: 100%;
+        width: 4px;
+        border-radius: 50px; }
+        @media screen and (min-width: 768px) {
+          .site-banner__container .site-banner__name::after {
+            display: block; } }
+      .site-banner__container .site-banner__name .site-banner-name__surname {
+        color: #FB5D12;
+        font-size: 1.5em; }
+    .site-banner__container .site-banner__checks {
+      color: #fff;
+      list-style-type: none;
+      font-size: .8em;
+      text-transform: uppercase;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        .site-banner__container .site-banner__checks {
+          font-size: 1.3em;
+          text-align: left; } }
+      .site-banner__container .site-banner__checks .site-banner-checks__icon {
+        color: #fff;
+        font-size: .7em; }
+
+/*# sourceMappingURL=header.css.map */

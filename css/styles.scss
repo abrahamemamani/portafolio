@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+body, button, input, select, textarea {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.site-title{
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 5%;
+        height: 1px;
+        border-bottom: 6px dotted #FB5D12;
+        transform: translateX(-50%)
+    }
+}

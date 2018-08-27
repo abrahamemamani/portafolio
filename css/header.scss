@@ -1,0 +1,63 @@
+$color: #FB5D12;
+
+.site-banner{
+    background-image: url('../images/portafolio-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    @media screen and (min-width: '768px') {
+        height: 700px;
+    }
+    &__container{
+        height: 500px;
+        @media screen and (min-width: '768px') {
+            height: 700px;
+        }
+        .site-banner__name{
+            position: relative;
+            color: #fff;
+            line-height: 1;
+            padding: 15px 0;
+            font-size: 2em;
+            text-align: center;
+            @media screen and (min-width: '768px') {
+                font-size: 3em;
+                text-align: right;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                display: none;
+                top: 0;
+                right: -20px;
+                background-color: $color;
+                height: 100%;
+                width: 4px;
+                border-radius: 50px;
+                @media screen and (min-width: '768px') {
+                    display: block;
+                }
+            }
+            .site-banner-name__surname{
+                color: #FB5D12;
+                font-size: 1.5em;
+            }
+        }
+        .site-banner__checks{
+            color: #fff;
+            list-style-type: none;
+            font-size: .8em;
+            text-transform: uppercase;
+            text-align: center;
+            @media screen and (min-width: '768px') {
+                font-size: 1.3em;
+                text-align: left;
+            }
+            & .site-banner-checks__icon{
+                color: #fff;
+                font-size: .7em;
+            }
+        }
+    }
+}
