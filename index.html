@@ -21,7 +21,7 @@
 </head>
 <body>
 
-	<div class="site-wrapper">
+	<div id="app" class="site-wrapper">
 		<header>
 			<div class="site-banner p-relative">
 				<div class="rt-layer ly-black-5"></div>
@@ -38,21 +38,9 @@
 						<div class="col-md-6">
 							<div class="text-wrapper">
 								<ul class="site-banner__checks">
-									<li>
+									<li v-for="check in checks">
 										<span class="site-banner-checks__icon fas fa-check"></span>
-										<span> Desarrollador Front-end</span>
-									</li>
-									<li>
-										<span class="site-banner-checks__icon fas fa-check"></span>
-										<span> HTML, CSS, JavaScript, jQuery, Bootstrap</span>
-									</li>
-									<li>
-										<span class="site-banner-checks__icon fas fa-check"></span>
-										<span> Diseño web responsive</span>
-									</li>
-									<li>
-										<span class="site-banner-checks__icon fas fa-check"></span>
-										<span> Programación orientada a objetos</span>
+										<span v-text="' ' + check"></span>
 									</li>
 								</ul>
 							</div>
@@ -63,49 +51,19 @@
 		</header>
 		<main class="site-main">
 			<section class="site-portafolio">
-				<h2 class="site-title">Mi portafolio</h2>
+				<h2 class="site-title" v-text="site.title"></h2>
 				<div class="container">
-					<p><b>*Aclaración:</b> Son solo proyectos personales (de aprendizaje), ninguno es laboral.</p>
+					<p><b>*Aclaración: </b>{{ site.message }}</p>
 					<div class="row">
-						<div class="col-xsm-12 col-sm-6 col-lg-4">
+						<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards">
 							<article class="card">
-								<img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+								<img class="card-img-top" :src="card.image" alt="Card image cap">
 								<div class="card-body">
-									<h6><a href="https://abrahamemamani.github.io/foody/" target="_blank">Foody</a></h6>
+									<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
 									<hr>
-									<span class="word-normal small">
-										Profesional y elegante.
-										Foody es un template para restaurantes.
+									<span class="word-normal small" v-text="card.description">
 									</span>
-									<p class="card-body__data word-italic x-small">Ago - 2018</p>
-								</div>
-							</article>
-						</div>
-						<div class="col-xsm-12 col-sm-6 col-lg-4">
-							<article class="card">
-								<img class="card-img-top" src="images/2.jpg" alt="Card image cap">
-								<div class="card-body">
-									<h6><a href="https://abrahamemamani.github.io/codgames/" target="_blank">Codgames</a></h6>
-									<hr>
-									<span class="word-normal small">
-										Llamativo y adictivo, desde luego.
-										Se trata de un template para un negocio de videojuegos.
-									</span>
-									<p class="card-body__data word-italic x-small">Dic - 2017</p>
-								</div>
-							</article>
-						</div>
-						<div class="col-xsm-12 col-sm-6 col-lg-4">
-							<article class="card">
-								<img class="card-img-top" src="images/3.jpg" alt="Card image cap">
-								<div class="card-body">
-									<h6><a href="https://abrahamemamani.github.io/bienstar/" target="_blank">Bienstar</a></h6>
-									<hr>
-									<span class="word-normal small">
-										Buscando cumplir el sueño de todas, 
-										Bienstar está hecho para vestir bien y a la moda.
-									</span>
-									<p class="card-body__data word-italic x-small">Dic - 2017</p>
+									<p class="card-body__data word-italic x-small" v-text="card.date"></p>
 								</div>
 							</article>
 						</div>
@@ -114,13 +72,14 @@
 			</section>
 		</main>
 		<footer class="site-footer">
-			<p class="copy t-align-center">&copy;2018 Mi portafolio. Todos los derechos reservados | Diseñado por Abraham Mamani.</p>
+			<p class="copy t-align-center">&copy; {{ site.footer }}</p>
 		</footer>
 	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
