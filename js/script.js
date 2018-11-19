@@ -8,6 +8,13 @@ new Vue({
         },
         cards: [
             {
+                title: 'Instalar',
+                image: 'images/4.jpg',
+                description: 'Se trata de un mini-instagram utilizando el framework Laravel.',
+                date: 'Ago - 2018',
+                link: 'http://instalar.herokuapp.com/',
+            },
+            {
                 title: 'Foody',
                 image: 'images/1.jpg',
                 description: 'Profesional y elegante. Foody es un template para restaurantes.',
