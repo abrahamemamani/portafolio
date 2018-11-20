@@ -11,8 +11,15 @@ new Vue({
                 title: 'Instalar',
                 image: 'images/4.jpg',
                 description: 'Se trata de un mini-instagram utilizando el framework Laravel.',
-                date: 'Ago - 2018',
+                date: 'Nov - 2018',
                 link: 'http://instalar.herokuapp.com/',
+            },
+            {
+                title: 'Vuegames',
+                image: 'images/5.jpg',
+                description: 'Es un CRUD utilizando los frameworks Laravel y Vuejs.',
+                date: 'Oct - 2018',
+                link: 'http://vuegames.herokuapp.com/',
             },
             {
                 title: 'Foody',
