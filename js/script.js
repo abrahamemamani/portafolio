@@ -17,7 +17,7 @@ new Vue({
             {
                 title: 'Vuegames',
                 image: 'images/5.jpg',
-                description: 'Es un CRUD utilizando los frameworks Laravel y Vuejs.',
+                description: 'Es un CRUD utilizando los frameworks Laravel y VueJS.',
                 date: 'Oct - 2018',
                 link: 'http://vuegames.herokuapp.com/',
             },
