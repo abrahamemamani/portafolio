@@ -1,0 +1,138 @@
+/*###### INICIALIZACION DE PROPIEDADES ######*/
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+/* line 2, ../sass/_init.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* line 7, ../sass/_init.scss */
+img {
+  display: block;
+  max-width: 100%; }
+
+/* line 11, ../sass/_init.scss */
+button, input[type^="submit"], input[type^="button"], select {
+  cursor: pointer; }
+
+/* line 14, ../sass/_init.scss */
+button, input, select {
+  outline: 0; }
+
+/* line 17, ../sass/_init.scss */
+hr {
+  margin: 10px 0; }
+
+/* line 2, ../sass/_styles.scss */
+body, button, input, select, textarea {
+  font-family: 'Titillium Web', sans-serif; }
+
+/* line 6, ../sass/_styles.scss */
+.site-title {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20px; }
+  /* line 11, ../sass/_styles.scss */
+  .site-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 5%;
+    height: 1px;
+    border-bottom: 6px dotted #FB5D12;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+/* line 3, ../sass/_header.scss */
+.site-banner {
+  background-image: url("../images/portafolio-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px; }
+  @media screen and (min-width: 768px) {
+    /* line 3, ../sass/_header.scss */
+    .site-banner {
+      height: 700px; } }
+  /* line 12, ../sass/_header.scss */
+  .site-banner__container {
+    height: 500px; }
+    @media screen and (min-width: 768px) {
+      /* line 12, ../sass/_header.scss */
+      .site-banner__container {
+        height: 700px; } }
+    /* line 17, ../sass/_header.scss */
+    .site-banner__container .site-banner__name {
+      position: relative;
+      color: #fff;
+      line-height: 1;
+      padding: 15px 0;
+      font-size: 2em;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        /* line 17, ../sass/_header.scss */
+        .site-banner__container .site-banner__name {
+          font-size: 3em;
+          text-align: right; } }
+      /* line 28, ../sass/_header.scss */
+      .site-banner__container .site-banner__name::after {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 0;
+        right: -20px;
+        background-color: #FB5D12;
+        height: 100%;
+        width: 4px;
+        border-radius: 50px; }
+        @media screen and (min-width: 768px) {
+          /* line 28, ../sass/_header.scss */
+          .site-banner__container .site-banner__name::after {
+            display: block; } }
+      /* line 42, ../sass/_header.scss */
+      .site-banner__container .site-banner__name .site-banner-name__surname {
+        color: #FB5D12;
+        font-size: 1.5em; }
+    /* line 47, ../sass/_header.scss */
+    .site-banner__container .site-banner__checks {
+      color: #fff;
+      list-style-type: none;
+      font-size: .8em;
+      text-transform: uppercase;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        /* line 47, ../sass/_header.scss */
+        .site-banner__container .site-banner__checks {
+          font-size: 1.3em;
+          text-align: left; } }
+      /* line 57, ../sass/_header.scss */
+      .site-banner__container .site-banner__checks .site-banner-checks__icon {
+        color: #fff;
+        font-size: .7em; }
+
+/* line 1, ../sass/_portafolio.scss */
+.site-portafolio {
+  background-color: #EFEFEF;
+  padding: 40px 0; }
+  /* line 4, ../sass/_portafolio.scss */
+  .site-portafolio .card {
+    -webkit-box-shadow: 3px 10px 10px -12px #666;
+            box-shadow: 3px 10px 10px -12px #666;
+    margin-bottom: 10px; }
+    /* line 8, ../sass/_portafolio.scss */
+    .site-portafolio .card-body__data {
+      color: #666; }
+
+/* line 1, ../sass/_footer.scss */
+.site-footer {
+  background-color: #141414;
+  padding: 15px 0; }
+
+/* line 5, ../sass/_footer.scss */
+.copy {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: .9em; }

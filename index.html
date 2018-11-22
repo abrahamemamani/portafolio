@@ -12,37 +12,34 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
 	integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/raptill-alpha-1.0.css">
-	<link rel="stylesheet" href="css/init.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/portafolio.css">
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/raptill-4.1.0.css">
+	<link rel="stylesheet" href="css/template.css">
 </head>
 <body>
 
 	<div id="app" class="site-wrapper">
 		<header>
-			<div class="site-banner p-relative">
-				<div class="rt-layer ly-black-5"></div>
-				<div class="container">
-					<div class="site-banner__container row align-items-center">
-						<div class="col-md-6">
-							<div class="text-wrapper">
-								<p class="site-banner__name t-transform-uppercase">
-									<span>{_Abraham Esteban</span>
-									<span class="site-banner-name__surname">Mamani_}</span>
-								</p>
+			<div style="position: relative;" class="site-banner">
+				<div class="rt-layer ly-black-5">
+					<div class="container">
+						<div class="site-banner__container row align-items-center">
+							<div class="col-md-6">
+								<div class="text-wrapper">
+									<p class="site-banner__name word w-uppercase">
+										<span>{_Abraham Esteban</span>
+										<span class="site-banner-name__surname">Mamani_}</span>
+									</p>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="text-wrapper">
-								<ul class="site-banner__checks">
-									<li v-for="check in checks">
-										<span class="site-banner-checks__icon fas fa-check"></span>
-										<span v-text="' ' + check"></span>
-									</li>
-								</ul>
+							<div class="col-md-6">
+								<div class="text-wrapper">
+									<ul class="site-banner__checks">
+										<li v-for="check in site.checks">
+											<span class="site-banner-checks__icon fas fa-check"></span>
+											<span v-text="' ' + check"></span>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -53,32 +50,68 @@
 			<section class="site-portafolio">
 				<h2 class="site-title" v-text="site.title"></h2>
 				<div class="container">
-					<p><b>*Aclaración: </b>{{ site.message }}</p>
-					<div class="row">
-						<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards">
-							<article class="card">
-								<img class="card-img-top" :src="card.image" alt="Card image cap">
-								<div class="card-body">
-									<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
-									<hr>
-									<span class="word-normal small" v-text="card.description">
-									</span>
-									<p class="card-body__data word-italic x-small" v-text="card.date"></p>
-								</div>
-							</article>
+					<section class="space-section-25">
+						<h3 class="tx-grey tx-darken-4">Experiencia laboral (Real)</h3>
+						<div class="row">
+							<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards.experiences">
+								<article class="card">
+									<img class="card-img-top" :src="card.image" alt="Card image cap">
+									<div class="card-body">
+										<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
+										<hr>
+										<span class="word small" v-text="card.description">
+										</span>
+										<p class="card-body__data word small" v-text="card.date"></p>
+									</div>
+								</article>
+							</div>
 						</div>
-					</div>
+					</section>
+					<hr>
+					<section class="space-section-25">
+						<h3 class="tx-grey tx-darken-4">Aplicaciones web (*)</h3>
+						<div class="row">
+							<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards.applications">
+								<article class="card">
+									<img class="card-img-top" :src="card.image" alt="Card image cap">
+									<div class="card-body">
+										<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
+										<hr>
+										<span class="word small" v-text="card.description">
+										</span>
+										<p class="card-body__data word small" v-text="card.date"></p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+					<hr>
+					<section class="space-section-25">
+						<h3 class="tx-grey tx-darken-4">Templates (*)</h3>
+						<div class="row">
+							<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards.templates">
+								<article class="card">
+									<img class="card-img-top" :src="card.image" alt="Card image cap">
+									<div class="card-body">
+										<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
+										<hr>
+										<span class="word small" v-text="card.description">
+										</span>
+										<p class="card-body__data word small" v-text="card.date"></p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+					<p v-html="site.message"></p>
 				</div>
 			</section>
 		</main>
 		<footer class="site-footer">
-			<p class="copy t-align-center">&copy; {{ site.footer }}</p>
+			<p class="copy text-center">&copy; {{ site.footer }}</p>
 		</footer>
 	</div>
-	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="js/script.js"></script>
 </body>
