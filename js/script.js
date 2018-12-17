@@ -12,8 +12,6 @@ new Vue({
                 'Programación orientada a objetos'
             ]
         },
-        cards: [
-        ],
         cards: {
             experiences: [
                 {
@@ -41,6 +39,13 @@ new Vue({
                 }
             ],
             templates: [
+                {
+                    title: 'CoursesIT',
+                    image: 'images/tmp/4.jpg',
+                    description: 'CoursesIT es un template para centros de capacitación tecnológicos.',
+                    date: 'Dic - 2018',
+                    link: 'https://abrahamemamani.github.io/Coursesit/',
+                },
                 {
                     title: 'Foody',
                     image: 'images/tmp/1.jpg',
