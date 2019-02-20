@@ -1,13 +1,35 @@
+$color : #FB5D12;
+
 .site-portafolio{
     background-color: #EFEFEF;
     padding: 40px 0;
     .card{
         box-shadow: 3px 10px 10px -12px #666;
+        border: none;
         margin-bottom: 10px;
+        &-img-wrapper{
+            position: relative;
+        }
         &-body{
+            text-align: center;
             &__data{
                 color: #666;
             }
+            &__title{
+                font: {
+                    size: .95em;
+                    weight: 600;
+                }
+            }
+        }
+        &-img__date{
+            background-color: $color;
+            color: #fff;
+            padding: 0 10px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: .95em;
         }
     }
 }

@@ -54,16 +54,18 @@
 						<h3 class="tx-grey tx-darken-4">Experiencia laboral (Real)</h3>
 						<div class="row">
 							<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards.experiences">
-								<article class="card">
-									<img class="card-img-top" :src="card.image" alt="Card image cap">
-									<div class="card-body">
-										<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
-										<hr>
-										<span class="word small" v-text="card.description">
-										</span>
-										<p class="card-body__data word small" v-text="card.date"></p>
-									</div>
-								</article>
+								<a :href="card.link" target="_blank">
+									<article class="card">
+										<figure class="card-img-wrapper">
+											<img class="card-img-top" :src="card.image" alt="Card image cap">
+											<span class="card-img__date" v-text="card.date"></span>
+										</figure>
+										<div class="card-body">
+											<span class="card-body__title" v-text="card.title"></span>
+											<hr>
+											<span class="word small tx-grey tx-darken-4" v-text="card.description"></span>
+									</article>
+								</a>
 							</div>
 						</div>
 					</section>
@@ -72,16 +74,17 @@
 						<h3 class="tx-grey tx-darken-4">Aplicaciones web (*)</h3>
 						<div class="row">
 							<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards.applications">
-								<article class="card">
-									<img class="card-img-top" :src="card.image" alt="Card image cap">
-									<div class="card-body">
-										<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
-										<hr>
-										<span class="word small" v-text="card.description">
-										</span>
-										<p class="card-body__data word small" v-text="card.date"></p>
-									</div>
-								</article>
+								<a :href="card.link" target="_blank">
+									<article class="card">
+										<figure class="card-img-wrapper">
+											<img class="card-img-top" :src="card.image" alt="Card image cap">
+											<span class="card-img__date" v-text="card.date"></span>
+										</figure>
+										<div class="card-body">
+											<span class="card-body__title" v-text="card.title"></span>
+										</div>
+									</article>
+								</a>
 							</div>
 						</div>
 					</section>
@@ -90,16 +93,17 @@
 						<h3 class="tx-grey tx-darken-4">Templates (*)</h3>
 						<div class="row">
 							<div class="col-xsm-12 col-sm-6 col-lg-4" v-for="card in cards.templates">
-								<article class="card">
-									<img class="card-img-top" :src="card.image" alt="Card image cap">
-									<div class="card-body">
-										<h6><a :href="card.link" v-text="card.title" target="_blank"></a></h6>
-										<hr>
-										<span class="word small" v-text="card.description">
-										</span>
-										<p class="card-body__data word small" v-text="card.date"></p>
-									</div>
-								</article>
+								<a :href="card.link" target="_blank">
+									<article class="card">
+										<figure class="card-img-wrapper">
+											<img class="card-img-top" :src="card.image" alt="Card image cap">
+											<span class="card-img__date" v-text="card.date"></span>
+										</figure>
+										<div class="card-body">
+											<span class="card-body__title" v-text="card.title"></span>
+										</div>
+									</article>
+								</a>
 							</div>
 						</div>
 					</section>

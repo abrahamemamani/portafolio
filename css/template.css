@@ -24,6 +24,14 @@ button, input, select {
 hr {
   margin: 10px 0; }
 
+/* line 20, ../sass/_init.scss */
+figure {
+  margin: 0; }
+
+/* line 24, ../sass/_init.scss */
+a:hover {
+  text-decoration: none; }
+
 /* line 2, ../sass/_styles.scss */
 body, button, input, select, textarea {
   font-family: 'Titillium Web', sans-serif; }
@@ -69,7 +77,7 @@ body, button, input, select, textarea {
       position: relative;
       color: #fff;
       line-height: 1;
-      padding: 15px 0;
+      padding: 35px 0;
       font-size: 2em;
       text-align: center; }
       @media screen and (min-width: 768px) {
@@ -106,25 +114,45 @@ body, button, input, select, textarea {
       @media screen and (min-width: 768px) {
         /* line 47, ../sass/_header.scss */
         .site-banner__container .site-banner__checks {
-          font-size: 1.3em;
+          font-size: 1.2em;
           text-align: left; } }
       /* line 57, ../sass/_header.scss */
       .site-banner__container .site-banner__checks .site-banner-checks__icon {
         color: #fff;
         font-size: .7em; }
 
-/* line 1, ../sass/_portafolio.scss */
+/* line 3, ../sass/_portafolio.scss */
 .site-portafolio {
   background-color: #EFEFEF;
   padding: 40px 0; }
-  /* line 4, ../sass/_portafolio.scss */
+  /* line 6, ../sass/_portafolio.scss */
   .site-portafolio .card {
     -webkit-box-shadow: 3px 10px 10px -12px #666;
             box-shadow: 3px 10px 10px -12px #666;
+    border: none;
     margin-bottom: 10px; }
-    /* line 8, ../sass/_portafolio.scss */
-    .site-portafolio .card-body__data {
-      color: #666; }
+    /* line 10, ../sass/_portafolio.scss */
+    .site-portafolio .card-img-wrapper {
+      position: relative; }
+    /* line 13, ../sass/_portafolio.scss */
+    .site-portafolio .card-body {
+      text-align: center; }
+      /* line 15, ../sass/_portafolio.scss */
+      .site-portafolio .card-body__data {
+        color: #666; }
+      /* line 18, ../sass/_portafolio.scss */
+      .site-portafolio .card-body__title {
+        font-size: .95em;
+        font-weight: 600; }
+    /* line 25, ../sass/_portafolio.scss */
+    .site-portafolio .card-img__date {
+      background-color: #FB5D12;
+      color: #fff;
+      padding: 0 10px;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      font-size: .95em; }
 
 /* line 1, ../sass/_footer.scss */
 .site-footer {
